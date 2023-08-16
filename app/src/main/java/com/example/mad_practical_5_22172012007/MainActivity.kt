@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         Intent(Intent.ACTION_VIEW, Uri.parse(url)).also { startActivity(it) }
     }
     fun opencall(number:String){
-
+        Intent(Intent.ACTION_DIAL).setData(Uri.parse("tel:$number")).also { startActivity(it) }
     }
     fun opencalllog(){
 
